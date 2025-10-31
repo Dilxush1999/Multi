@@ -1,0 +1,11 @@
+Flask
+python-telegram-bot==20.6
+pillow
+pytesseract
+img2pdf
+pdf2docx
+pyzbar
+qrcode
+opencv-python-headless
+requests
+reportlab
