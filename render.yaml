@@ -1,0 +1,14 @@
+services:
+  - type: web
+    name: telegram-bot
+    env: python
+    buildCommand: apt-get update && apt-get install -y libreoffice tesseract-ocr poppler-utils && pip install -r requirements.txt
+    startCommand: gunicorn app:app
+    envVars:
+      - key: TOKEN
+        fromDatabase:
+          name: telegram-token
+          property: token
+      - key: ADMIN_ID
+        value: 1223308504
+    autoDeploy: true
